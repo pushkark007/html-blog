@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url(bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700|Work+Sans:400,500,600,700|Dancing+Script:400,700");
+body {
+    font-family: "Work Sans", sans-serif;
+	padding:0;
+	margin:0;
+}
+
+.hamburger-box {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px;
+    height: 30px;
+    width: 30px;
+}
+
+.hamburger-toggle-icon {
+    background: #000 none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    transition: height 0.1s ease 0.3s;
+    width: 28px;
+}
+
+.hamburger-box.active .hamburger-toggle-icon {
+    height: 0;
+}
+
+.hamburger-box.active .hamburger-toggle-icon::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top .3s ease, transform .3s ease .3s;
+}
+
+.hamburger-box.active .hamburger-toggle-icon::after {
+    top: -2px;
+    transform: rotate(45deg);
+    transition: top .3s ease, transform .3s ease .3s;
+}
+
+.hamburger-toggle-icon::after,
+.hamburger-toggle-icon::before {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background: #000;
+    display: block;
+    position: relative;
+    top: 5px;
+    transition: top .3s ease .3s, transform .3s ease;
+}
+
+.hamburger-toggle-icon::before {
+    top: -7px;
+}

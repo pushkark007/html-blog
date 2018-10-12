@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sidebar </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/helper.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="sidebar">
+        <div id="dismiss">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Lineage_OS_Logo.png" width="120px">
+        </div>
+
+        <ul class="list-unstyled main-menu components">
+            <li>
+                <a href="#homeSubmenu" class="drop-icon collapsed" data-toggle="collapse" aria-expanded="false">Home</a>
+                <ul class="collapse list-unstyled sub-menu" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+
+                <a href="#pageSubmenu" class="drop-icon collapsed" data-toggle="collapse" aria-expanded="false">Pages</a>
+                <ul class="collapse list-unstyled sub-menu" id="pageSubmenu">
+                    <li>
+                        <a href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <button type="button" class="btn btn-info sidebarCollapse">
+                        <i class="fa fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+
+
+
+    <div class="overlay"></div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+
+            $('#dismiss, .overlay').on('click', function() {
+                $('.sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('.sidebarCollapse').on('click', function() {
+                $('.sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>

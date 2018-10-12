@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.3 Arial, sans-serif;
+    color: #4f4f4f;
+}
+
+a,
+a:visited {
+    outline: none;
+    color: #389dc1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+section,
+footer,
+header,
+aside {
+    display: block;
+}
+
+#upload {
+    background-color: #9327bf;
+    background-image: -webkit-linear-gradient(top, #9327bf, #00d0ff);
+    background-image: -moz-linear-gradient(top, #9327bf, #00d0ff);
+    background-image: linear-gradient(top, #9327bf, #00d0ff);
+    width: 300px;
+    padding: 20px;
+    border-radius: 3px;
+    margin: 200px auto 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drop {
+    padding: 40px 50px;
+    border-radius: 3px;
+    border: 2px dashed #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.3);
+}
+
+#drop a {
+    background-color: #ffffff;
+    padding: 12px 26px;
+    color: #a000ff;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 12px;
+    line-height: 1;
+}
+
+#drop a:hover {
+    background-color: #ffffff;
+    color: #a000ff;
+}
+
+#drop input {
+    display: none;
+}
+
+#upload ul {
+    list-style: none;
+}
+
+#upload ul li {
+    background-color: #8c00f8;
+    background-image: -webkit-linear-gradient(to right, #8c00f8, #12ebeb);
+    background-image: -moz-linear-gradient(to right, #8c00f8, #12ebeb);
+    background-image: linear-gradient(to right, #8c00f8, #12ebeb);
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding: 15px;
+    height: 36px;
+    position: relative;
+}
+
+#upload ul li:first-child {
+    margin-top: 30px;
+}
+
+#upload ul li input {
+    display: none;
+}
+
+#upload ul li p {
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 13px;
+    left: 80px;
+}
+
+#upload ul li i {
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    display: block;
+}
+
+#upload ul li canvas {
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#upload ul li span {
+    width: 15px;
+    height: 12px;
+    background: url(../img/icons.png) no-repeat;
+    position: absolute;
+    top: 26px;
+    right: 17px;
+    cursor: pointer;
+}
+
+#upload ul li.working span {
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p {
+    color: white;
+}
